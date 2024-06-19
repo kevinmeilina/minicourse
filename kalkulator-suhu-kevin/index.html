@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript">
+
+            /* Block Celcius */
+            celciusreamur = () =>{
+                let input = document.getElementById('input').value;
+                let hasil = (4/5) * input;
+                document.getElementById('hasil').value = hasil;
+            }
+
+            /* Block Reamur */
+            reamurcelcius = () =>{
+                let input = document.getElementById('input1').value;
+                let hasil = (input) / (4/5);
+                document.getElementById('hasil1').value = hasil;
+            }
+
+            /* Block Fahrenheit */
+            fahrenheitcelcius = () =>{
+                let input = document.getElementById('input2').value;
+                let hasil = (input-32) / (9/5);
+                document.getElementById('hasil2').value = hasil;
+            }
+
+            kelvinfahrenheit = () =>{
+                let input = document.getElementById('input3').value;
+                let hasil = (input*(9/5))-459.67;
+                document.getElementById('hasil3').value = hasil;
+            }
+            
+        </script>
+</head>
+
+<body>
+    <nav>
+        <div class="row">
+            <img class="logo" src="images/favicon.png"> <B>MINI COURSE - MINI PROJECT</B>
+            <div class="navigasi" content="width=device-width, initial-scale=1.0">
+                <a class="text-nav" href="#"><b>KALKULATOR SUHU</b></a>
+        </div>
+    </nav>
+
+    <header>
+    <img class="col-kanan" src="images/header/header1.png">
+        <div class="row">
+            <div class="col-kiri" style="text-align:center";>
+                <h1 class="judul-header">KALKULATOR SUHU</h1>
+                <!-- Block Celcius -->
+                <div class="card-header">
+                    <h4>Celcius >> Reamur</h4>
+                </div>
+                <div class="card-body">
+                    Masukkan Suhu (Celcius)
+                    <input type="number" id="input" class="form-control">
+                    <button type="button" class="btn btn-success btn-block" onclick="celciusreamur()">
+                        Convert
+                    </button>
+                    |  Result
+                    <input type="text" id="hasil" class="form-control" readonly> Reamur
+                </div>
+                <br>
+
+                <!-- Block Reamur -->
+                <div class="card-header">
+                    <h4>Reamur >> Celcius</h4>
+                </div>
+                <div class="card-body">
+                    Masukkan Suhu (Reamur)
+                    <input type="number" id="input1" class="form-control">
+                    <button type="button" class="btn btn-success btn-block" onclick="reamurcelcius()">
+                        Convert
+                    </button>
+                    |  Result
+                    <input type="text" id="hasil1" class="form-control" readonly> Celcius
+                </div>
+                <br>
+
+                <!-- Block Fahrenheit -->
+                <div class="card-header">
+                    <h4>Fahrenheit >> Celcius</h4>
+                </div>
+                <div class="card-body">
+                    Masukkan Suhu (Fahrenheit)
+                    <input type="number" id="input2" class="form-control">
+                    <button type="button" class="btn btn-success btn-block" onclick="fahrenheitcelcius()">
+                        Convert
+                    </button>
+                    |  Result
+                    <input type="text" id="hasil2" class="form-control" readonly> Celcius
+                </div>
+                <br>
+
+                <!-- Block Kelvin -->
+                <div class="card-header">
+                    <h4>Kelvin >> Fahrenheit</h4>
+                </div>
+                <div class="card-body">
+                    Masukkan Suhu (Kelvin)
+                    <input type="number" id="input3" class="form-control">
+                    <button type="button" class="btn btn-success btn-block" onclick="kelvinfahrenheit()">
+                        Convert
+                    </button>
+                    |  Result
+                    <input type="text" id="hasil3" class="form-control" readonly> Fahrenheit
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <section class="our-team" id="our-team">
+        <h2 class="judul-header">PENJELASAN CARA KALKULASI</h2>
+        <div class="row">
+            <div class="col-feb">
+                <p class="button-fti" href="#">Reamur (ºR) to Celcius (ºC)</p>
+                <br><img src="images/aset/rtoc.png">
+                <p class="subjudul-prodi" style="text-align: justify;">• Skala Reamur bisa dikonversi ke suhu Celcius menggunakan rumus di atas.</p><br>
+                <p class="subjudul-prodi" style="text-align: justify;">• Ketetapan titik beku air adalah air 0 ºR dan titik didih sebesar 80 ºR. Titik beku Reamur adalah 0º, sedangkan titik didih air 80º. 1 ºR sama dengan 1,25 ºC.</p>
+            </div>
+            <div class="col-feb">
+                <p class="button-fti" href="#">Fahrenheit (ºF) to Celcius (ºC)</p>
+                <br><img src="images/aset/ftoc.png">
+                <p class="subjudul-prodi" style="text-align: justify;">• Skala Fahrenheit bisa dikonversi ke suhu Celcius menggunakan rumus di atas.</p><br>
+                <p class="subjudul-prodi" style="text-align: justify;">• Termometer Celcius terdiri dari 100 skala, sedangkan termometer Fahrenheit sebesar 180 skala. Perbandingan Celcius ke Fahrenheit sebesar 100/180 = 5/9.</p>
+            </div>
+            <div class="col-feb">
+                <p class="button-fti" href="#">Kelvin (K) to Fahrenheit (ºF)</p>
+                <br><img src="images/aset/ktof.png">
+                <p class="subjudul-prodi" style="text-align: justify;">• Skala Kelvin bisa dikonversi ke suhu Fahrenheit menggunakan rumus di atas.</p><br>
+                <p class="subjudul-prodi" style="text-align: justify;">• Ubah Skala Kelvin menjadi Celcius terlebih dahulu menggunakan rumus K - 273. Setelah ditemukan suhu ºC, dapat dikonversi ke ºF menggunakan rumus sebelumnya.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="row">
+            <div class="navigasi">
+                <a class="text-nav" href="#"><b>KALKULATOR SUHU</b></a>
+            </div>
+            <p class="copyright">© 2024 Kevin Meilina Agatha. All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
